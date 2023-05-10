@@ -30,7 +30,6 @@ namespace UserDetailsWithApi.Tests.Controllers
             [TestMethod]
             public void _AddUserTrue()
             {
-                //Before unit  test start Please Change User data 
                 Users users = new Users();
                 users.name = "krishna";
                 users.email = $"K{DateTime.Now.ToString("ddMMyyyyHHmmss")}@test.com";
@@ -38,11 +37,9 @@ namespace UserDetailsWithApi.Tests.Controllers
                 users.status = "ACTIVE";
                 usersController controller = new usersController();
                 var Result = controller.addUsers(users, apiBaseAddress, token);
-
-
                 Assert.IsTrue(Result, "ADD TEST PASSED");
-
             }
+
             [TestMethod]
             public void _AddUserFalse()
             {
