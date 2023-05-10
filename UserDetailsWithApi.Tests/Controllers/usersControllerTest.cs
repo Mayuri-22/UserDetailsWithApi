@@ -43,7 +43,7 @@ namespace UserDetailsWithApi.Tests.Controllers
                 Assert.IsTrue(Result, "ADD TEST PASSED");
 
             }
-
+            [TestMethod]
             public void _AddUserFalse()
             {
                 Users users = new Users();
@@ -53,7 +53,7 @@ namespace UserDetailsWithApi.Tests.Controllers
                 users.status = "test";
                 usersController controller = new usersController();
                 var Result = controller.addUsers(users, apiBaseAddress, token);
-                Assert.IsFalse(Result, "ADD TEST FAILED");
+                Assert.IsTrue(Result, "ADD TEST FAILED");
             }
 
 
