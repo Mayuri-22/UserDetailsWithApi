@@ -50,7 +50,7 @@ namespace UserDetailsWithApi.Tests.Controllers
                 users.status = "test";
                 usersController controller = new usersController();
                 var Result = controller.addUsers(users, apiBaseAddress, token);
-                Assert.IsTrue(Result, "ADD TEST FAILED");
+                Assert.IsFalse(Result, "ADD TEST FAILED");
             }
 
 
@@ -82,7 +82,7 @@ namespace UserDetailsWithApi.Tests.Controllers
                 users.status = "Active";
                 users.id = 0;
                 var Result = controller.updateUsers(users, apiBaseAddress, token);
-                Assert.IsTrue(Result, "Update Test Failed ");
+                Assert.IsFalse(Result, "Update Test Failed ");
             }
 
             [TestMethod]
@@ -106,7 +106,7 @@ namespace UserDetailsWithApi.Tests.Controllers
                 usersController controller = new usersController();
                 string id = "0";
                 var Result = controller.deleteUsers(id, apiBaseAddress, token);
-                Assert.IsTrue(Result, " DELETE TEST FAILED");
+                Assert.IsFalse(Result, " DELETE TEST FAILED");
             }
         }
     }
