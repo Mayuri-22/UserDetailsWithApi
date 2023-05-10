@@ -102,7 +102,7 @@ namespace UserDetailsWithApi.Tests.Controllers
             [TestMethod]
             public void _DeleteUserFail()
             {
-                //Before unit test start Please Change User data
+                
                 usersController controller = new usersController();
                 string id = "0";
                 var Result = controller.deleteUsers(id, apiBaseAddress, token);
